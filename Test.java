@@ -11,11 +11,6 @@ import com.cert.Opdracht1;
 //Dit is commentaar
 public class Test {
     public static void main(String[] args) {
-        Opdracht1 opdracht1 = new Opdracht1();
-        opdracht1.four = 5;
-        System.out.println(opdracht1.four);
-
-        System.out.println(args[0]);
-        System.out.println(args[1]);
+        System.out.println("Verander secondary branch");
     }
 }
