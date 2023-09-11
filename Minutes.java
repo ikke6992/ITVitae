@@ -7,19 +7,19 @@ public class Minutes {
         return result.multiply(BigInteger.valueOf((long)years));
     }
 
-    public long monthsToMinutes(int months) {
+    public int monthsToMinutes(int months) {
         return months*30*24*60;
     }
 
-    public long weeksToMinutes(int weeks) {
+    public int weeksToMinutes(int weeks) {
         return weeks*7*24*60;
     }
 
-    public long daysToMinutes(int days) {
+    public int daysToMinutes(int days) {
         return days*24*60;
     }
 
-    public short hoursToMinutes(int hours) {
+    public short hoursToMinutes(byte hours) {
         return (short)(hours*60);
     }
 

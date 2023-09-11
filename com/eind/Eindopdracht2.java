@@ -18,9 +18,9 @@ public class Eindopdracht2 {
         int even = somVanEvenGetallen(getal);
 
         System.out.println("som van oneven getallen tot en met " + 
-            getal + " is " + oneven);
+            getal + " is " + (((1+getal)/2)*((1+getal)/2)));
         System.out.println("som van even getallen tot en met " + 
-            getal + " is " + even);
+            getal + " is " + (getal/2*(getal/2+1)));
         System.out.println("verschil tussen twee sommen is " + 
             Math.abs(oneven - even));        
     }
