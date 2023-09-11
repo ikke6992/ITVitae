@@ -1,8 +1,8 @@
 /**
  * Docblock:
  * 
- * Thomas Vrielink
- * 31-08-2023
+ * @author Thomas Vrielink
+ * @date 31-08-2023
  * 
  * Waar dit project voor bedoeld is
  */
