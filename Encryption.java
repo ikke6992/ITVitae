@@ -11,6 +11,11 @@ public class Encryption {
 
         int cypher = a ^ b;
 
+        /**
+         * cypher is niet per se even lang als de integers, dus zorg dat de gemaakte String
+         * genoeg nullen aan de voorkant toevoegt om evenlang te zijn als de maximum lengte van
+         * een positieve integer
+         */
         String bitString = String.format("%31s", Integer.toBinaryString(cypher)).replace(" ", "0");
 
         String[] bitChars = bitString.split("");
@@ -22,7 +27,7 @@ public class Encryption {
 
         Collections.shuffle(bitList);
         String result = String.join("", bitList);
-        
+
         int decypher = Integer.parseInt(result, 2);
 
         int newA = a ^ decypher;
