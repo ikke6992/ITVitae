@@ -21,15 +21,17 @@ public class Hotel implements HotelInterface {
 
         kamers = new VasteGrootteGroep<Kamer>(aantalKamers);
 
-        for (int index = 0; index < aantalKamers/4; index++) {
+        int index = 0;
+
+        for (; index < aantalKamers/4; index++) {
             kamers.add(new EenPersoonsKamer());
         }
 
-        for (int index = aantalKamers/4; index <= aantalKamers/4*3; index++) {
+        for (; index <= aantalKamers/4*3; index++) {
             kamers.add(new TweePersoonsKamer());
         }
 
-        for (int index = aantalKamers/4*3+1; index < aantalKamers; index++) {
+        for (; index < aantalKamers; index++) {
             kamers.add(new VierPersoonsKamer());
         }
     }

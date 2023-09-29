@@ -47,7 +47,8 @@ public class Receptie {
 
                 for (int i = 0; i < hotel.getAantalKamers(); i++) {
                     Groep<Gast> gasten = hotel.getKamer(i).getGasten();
-                    System.out.printf("Kamer %d (maximaal %d gasten)\n", i, gasten.getCapaciteit());
+                    System.out.printf("Kamer %d (maximaal %d %s)\n", i, gasten.getCapaciteit(), 
+                        gasten.getCapaciteit() == 1 ? "gast" : "gasten");
                     if (gasten.isLeeg()) {
                         System.out.print("\tLeeg\n");
                     } else {
