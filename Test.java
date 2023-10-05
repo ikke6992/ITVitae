@@ -19,7 +19,6 @@ public class Test {
         double myDouble = 1;
         char myChar = '1';
 
-        System.out.printf("%d %d %d %d %f %f %s", myByte, myShort, myInt, myLong, myFloat, myDouble, myChar);
-
+        System.out.printf("%d %d %d %d %f %f %s\n", myByte, myShort, myInt, myLong, myFloat, myDouble, myChar);
     }
 }
