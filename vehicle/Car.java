@@ -2,21 +2,21 @@ package vehicle;
 
 import java.time.LocalDate;
 
-public class Car extends Vehicle {
+public class Car extends Vehicle implements CarInterface {
 
     private int maxSpeed;
     private String licensePlate;
-    private String brand;
-    private String model;
+    private final String brand;
+    private final String model;
     private LocalDate regDate;
     
-    public Car(int weight, String colour, int maxSpeed, String licensePlate, String brand, String model, LocalDate regDate) {
+    public Car(int weight, String colour, int maxSpeed, String licensePlate, String brand, String model, LocalDate regDate) throws InvalidPlateException {
         setWeight(weight);
         setColour(colour);
         setMaxSpeed(maxSpeed);
-        setLicensePlate(licensePlate);
-        setBrand(brand);
-        setModel(model);
+        setLicense(licensePlate);
+        this.brand = brand;
+        this.model = model;
         setRegDate(regDate);
     }
 
@@ -28,28 +28,24 @@ public class Car extends Vehicle {
         this.maxSpeed = maxSpeed;
     }
 
-    public String getLicensePlate() {
+    public String getLicense() {
         return licensePlate;
     }
 
-    public void setLicensePlate(String licensePlate) {
-        this.licensePlate = licensePlate;
+    public void setLicense(String licensePlate) throws InvalidPlateException {
+        if (plateFormat.matcher(licensePlate).matches()) {
+            this.licensePlate = licensePlate;
+        } else {
+            throw new InvalidPlateException(licensePlate);
+        }
     }
 
     public String getBrand() {
         return brand;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
     public String getModel() {
         return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
     }
 
     public String getRegDate() {
@@ -60,20 +56,16 @@ public class Car extends Vehicle {
         this.regDate = regDate;
     }
 
-    public String printInfo() {
+    public void printInfo() {
         StringBuilder print = new StringBuilder();
 
-        print.append(getBrand() + " " + getModel() + "\t" + getLicensePlate() + "\n");
+        print.append(getBrand() + " " + getModel() + "\t" + getLicense() + "\n");
         print.append("Registration Date: " + getRegDate() + "\n");
         print.append("Colour: " + getColour() + "\n");
         print.append("Weight: " + getWeight() + "kg\n");
         print.append("Maximum Speed: " + getMaxSpeed() + "km/h\n");
         
-        return print.toString();
+        System.out.println(print);
     }
-
-
-
-
     
 }

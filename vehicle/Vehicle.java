@@ -1,6 +1,6 @@
 package vehicle;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements VehicleInterface {
     
 
     private int weight;
