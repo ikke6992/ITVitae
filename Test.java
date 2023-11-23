@@ -8,17 +8,26 @@
  */
 import com.cert.Opdracht1;
 
+class A {
+    public A() {
+        this.print();
+    }
+    public void print() {
+        System.out.print("A ");
+    }
+}
+
+class B extends A {
+    int i = 4;
+    public void print() {
+        System.out.print(i + " ");
+    }
+}
+
 //Dit is commentaar
 public class Test {
     public static void main(String[] args) {
-        byte myByte = 1;
-        short myShort = 1;
-        int myInt = 1;
-        long myLong = 1;
-        float myFloat = 1;
-        double myDouble = 1;
-        char myChar = '1';
-
-        System.out.printf("%d %d %d %d %f %f %s\n", myByte, myShort, myInt, myLong, myFloat, myDouble, myChar);
+        A a = new B();
+        a.print();
     }
 }

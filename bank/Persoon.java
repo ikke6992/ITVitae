@@ -2,11 +2,11 @@ package bank;
 
 import java.time.LocalDate;
 
-public class Persoon {
+public class Persoon implements PersoonInterface {
 
     private String naam;
     private String adres;
-    private LocalDate geboortedatum;
+    private final LocalDate geboortedatum;
     
     private Rekening rekening;
 
@@ -21,8 +21,16 @@ public class Persoon {
         return naam;
     }
 
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
+
     public String getAdres() {
         return adres;
+    }
+
+    public void setAdres(String adres) {
+        this.adres = adres;
     }
 
     public String getGeboortedatum() {
