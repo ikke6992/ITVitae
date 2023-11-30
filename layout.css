@@ -1,0 +1,36 @@
+body {
+    background-image: url("steve.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: cyan;
+    color: yellow;
+    text-align: center;
+}
+
+h1 {
+    color: maroon;
+}
+
+h2 {
+    color:navy;
+}
+
+section {
+    text-align: left;
+    margin: 20px
+}
+
+a {
+    background-color: blueviolet;
+    color: deeppink;
+}
+
+p {
+    border-style: dotted dashed solid double;
+    border-top-color:coral;
+    border-right-color: greenyellow;
+    border-bottom-color:olive;
+    border-left-color:indigo;
+    border-width:thick;
+    border-radius: 10px;
+}

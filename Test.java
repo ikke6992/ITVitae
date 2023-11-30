@@ -10,7 +10,7 @@ import com.cert.Opdracht1;
 
 class A {
     public A() {
-        this.print();
+        print();
     }
     public void print() {
         System.out.print("A ");
